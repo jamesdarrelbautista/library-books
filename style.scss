@@ -1,0 +1,71 @@
+$color:("slate300": #94a3b8,
+    "amber": #fbbf24,
+    "lime": #15803d,
+);
+
+@mixin flex-center($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: map-get($map: $color, $key: 'amber');
+    padding: 16px;
+}
+
+.header {
+    @include flex-center(column);
+    color: map-get($map: $color, $key: "lime");
+}
+
+.form-section {
+    margin-top: 8px;
+    position: absolute;
+    left: 44%;
+    top: 20%;
+
+    border-radius: 12px;
+    border: 2px solid black;
+
+
+    background-color: map-get($map: $color, $key: "slate300");
+
+    .form {
+        width: auto;
+        // @include flex-center(column);
+        display: flex;
+        flex-direction: column;
+        // justify-content: start;
+        align-items: flex-end;
+        gap: 8px;
+        padding: 15px;
+
+        
+    }
+    p {
+        margin: 0;
+        align-self: center;
+    }
+    .submit{
+        align-self: center;
+    }
+}
+
+.text-section{
+    margin-top: 32px;
+    display: grid;
+    gap: 16px 24px;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+
+    div{
+        color: white;
+        border: 1px solid black;
+        padding: 0 16px;
+    }
+
+    h1{
+        color: map-get($map: $color, $key: 'lime');
+    }
+}
