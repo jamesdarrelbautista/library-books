@@ -40,7 +40,14 @@ let addBookToLibrary = function () {
         let title = document.createElement("div");
         console.log('title', title)
         title.innerHTML = `
-        <h1> ${book.title} </h1> by ${book.author}; ${book.pages} pages; Read status: ${book.read}`;
+        <h1> ${book.title} </h1> 
+        <h3>${book.author}</h3>
+        <section class='paragraph'>
+        <p>
+         ${book.pages} pages
+        </p> 
+        <p>Read status: ${book.read}</p>
+        </section>`;
         document.querySelector(".text-section").appendChild(title);
     })
     console.log(library);

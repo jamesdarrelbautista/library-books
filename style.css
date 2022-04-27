@@ -40,15 +40,37 @@ body {
   margin-top: 32px;
   display: grid;
   gap: 16px 24px;
+  height: 400px;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 .text-section div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: white;
   border: 1px solid black;
-  padding: 0 16px;
+  padding: 15px;
+  background-color: #be123c;
 }
 .text-section h1 {
-  color: #15803d;
+  text-align: center;
+  background-color: #15803d;
+}
+.text-section h3 {
+  text-align: center;
+  color: black;
+  background-color: #fbbf24;
+}
+.text-section p {
+  display: inline-block;
+  color: black;
+  background-color: rgb(201, 201, 201);
+  margin-bottom: 0;
+  align-self: flex-start;
+  justify-items: flex-end;
+}
+.text-section section {
+  margin-top: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
